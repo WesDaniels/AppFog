@@ -1,8 +1,7 @@
 #################
-## Api Keys
+## Secure Api Keys and DB Strings
 #################
-api_keys/
-
+block_github/
 
 #################
 ## Eclipse
