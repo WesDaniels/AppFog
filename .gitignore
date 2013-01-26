@@ -4,6 +4,11 @@
 block_github/
 
 #################
+## Node.js Remove Modules
+#################
+node_modules/
+
+#################
 ## Eclipse
 #################
 

@@ -1,0 +1,61 @@
+!!!5
+html
+  head
+    title #{title} - Wes Daniels - Web Developer - Austin Tx!
+    meta(name='viewport', content='width=device-width', initial-scale='1.0')
+    link(href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      .banner
+        .btn-group
+          a.btn(href='#')
+            i.icon-home.icon-2x
+            |  WesDaniels
+          a.btn.btn-large(href='#')
+            i.icon-cloud.icon-2x
+            |  Cloud
+          a.btn.btn-large(href='#')
+            i.icon-folder-open-alt.icon-2x
+            |  Projects
+          a.btn.btn-large(href='#')
+            i.icon-comment-alt.icon-2x
+            |  Contact
+          a.btn.btn-large(href='#')
+            i.icon-cog.icon-2x
+            |  Settings
+          a.btn.btn-large.dropdown-toggle(data-toggle='dropdown', href='#')  
+            i.icon-caret-down.icon-2x
+          ul.dropdown-menu
+            li
+              a(href='#')
+                i.icon-pencil Edit
+            li
+              a(href='#')
+                i.icon-trash Delete
+            li
+              a(href='#')
+                i.icon-ban-circle Ban
+            li.divider
+            li
+              a(href='#')
+                i.i Make admin
+
+      .menu
+        ul
+          - var menu = ["home","about","projects","contact",]
+          each item in menu
+            if item == title
+             li#selected: a(href='#{item}.html') #{item}
+            else
+             li: a(href='#{item}.html') #{item}
+      .title
+        p.italic Asp.Net, C#, REST, JSON, SQL, Security, and now...
+        h1 Node.js
+        p.big Web Development in Austin, Texas
+    .container
+      #divContent
+        !{mainContent}
+
+    script(src='http://code.jquery.com/jquery-latest.js')
+    script(src='http://fortawesome.github.com/Font-Awesome/assets/js/bootstrap-222.min.js')
